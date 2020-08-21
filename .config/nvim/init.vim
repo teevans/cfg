@@ -55,6 +55,7 @@ Plug 'mlaursen/vim-react-snippets'
 
 " Colorschem 
 Plug 'joshdick/onedark.vim'
+Plug 'sonph/onehalf'
 
 "  Vue 
 Plug 'posva/vim-vue'
@@ -72,7 +73,12 @@ Plug 'jparise/vim-graphql'
 Plug 'evanleck/vim-svelte'
 
 " Golden Ratio
-Plug 'roman/golden-ratio'
+"Plug 'roman/golden-ratio'
+
+" Add maktaba and bazel to the runtimepath.
+" (The latter must be installed before it can be used.)
+Plug 'google/vim-maktaba'
+Plug 'bazelbuild/vim-bazel'
 
 
 
@@ -115,6 +121,8 @@ set shortmess+=c
 set fillchars=vert:\                     " Sets the vertical split chars
 set previewheight=5
 
+set clipboard=unnamedplus
+
 " Faster Split Moving
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
@@ -126,6 +134,8 @@ nnoremap <leader>m          :w<CR>
 
 "Turn Edit Snippets
 nnoremap <leader>es         :UltiSnipsEdit<CR>
+
+nnoremap <leader>gr         :GoldenRatioResize<CR>
 
 "Edit .vimrc
 nnoremap <leader>vm         :e ~/.config/nvim/init.vim<CR>
@@ -154,6 +164,9 @@ nnoremap <leader>fr         :Rg<CR>
 "Shortcut to remove search highlighting
 nnoremap <leader><CR> :noh<CR>
 
+"Shortcut to close window
+nnoremap <leader>q :q<CR>
+
 " Remap to make splits easier
 nnoremap sp :vsplit <CR>
 nnoremap sv :split <CR>
@@ -166,6 +179,11 @@ set splitright
 "
 " ============= Golden Ratio Config
 let g:golden_ratio_exclude_nonmodifiable = 1
+
+" Base64
+:vnoremap <leader>64 c<c-r>=system('base64 --decode', @")<cr><esc>
+:vnoremap <leader>46 c<c-r>=system('base64', @")<cr><esc>
+
 
 "
 " ============= COC Config (AutoComplete)
@@ -199,7 +217,7 @@ call g:quickmenu#reset()
 " DadBoD Support
 xmap <expr> <C-Q> db#op_exec()
 " Import DB Configuration File
-source /home/tevans/.config/db/dbconfigs.vim
+"source /home/tevans/.config/db/dbconfigs.vim
 ""======================
 
 " FZF Setup
