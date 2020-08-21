@@ -32,7 +32,7 @@ alias mux="tmuxinator"
 alias ads="ev aad s"
 
 # Tmuxinator
-source ~/.bin/tmuxinator.zsh
+#source ~/.bin/tmuxinator.zsh
 
 # Bookmark Helper
 alias bm='cd $(cat ~/.config/bookmarks | fzf)'
@@ -51,7 +51,8 @@ export PATH="$PATH:/opt/mssql-tools/bin"
 export PATH="$PATH:$HOME/go/bin"
 export PATH="$PATH:$HOME/.local/bin"
 export PATH="$PATH:$HOME/.dotnet/tools"
+export PATH="$PATH:$PATH:/usr/local/go/bin"
 
-export MSBuildSDKsPath="/usr/share/dotnet/sdk/3.0.100/Sdks"
+export MSBuildSDKsPath="/usr/share/dotnet/sdk/3.1.401/Sdks"
 export ASPNETCORE_ENVIRONMENT=Development
 
