@@ -177,6 +177,13 @@ set splitright
 " Plugin Config
 " ============== 
 "
+"
+" ============= NERDTree
+let g:NERDTreeWinSize=60
+let g:NERDTreeShowHidden=1
+
+
+"
 " ============= Golden Ratio Config
 let g:golden_ratio_exclude_nonmodifiable = 1
 
@@ -351,4 +358,3 @@ function! s:show_documentation()
     call CocAction('doHover')
   endif
 endfunction
-
