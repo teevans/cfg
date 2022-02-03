@@ -50,6 +50,9 @@ vim.api.nvim_set_keymap('n', '<leader>q', ':q<CR>', { noremap = true })
 vim.api.nvim_set_keymap('n', 'sp', ':vsplit <CR>', { noremap = true })
 vim.api.nvim_set_keymap('n', 'sv', ':split <CR>', { noremap = true })
 
+vim.api.nvim_set_keymap('n', '<leader>fo', '<cmd>Telescope find_files<cr>', { noremap = true })
+vim.api.nvim_set_keymap('n', '<leader>fr', '<cmd>Telescope live_grep<cr>', { noremap = true })
+
 -- Base64
 vim.api.nvim_set_keymap('v', '<leader>64', 'c<c-r>=system(\'base64 --decode\', @\")<cr><esc>', { noremap = true })
 vim.api.nvim_set_keymap('v', '<leader>46', 'c<c-r>=system(\'base64\', @\")<cr><esc>', { noremap = true })
