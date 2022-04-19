@@ -1,4 +1,4 @@
-export ZSH="/Users/TEvans/.oh-my-zsh"
+export ZSH="/home/tevans/.oh-my-zsh"
 
 ZSH_THEME="avit"
 
@@ -29,8 +29,6 @@ alias config='/usr/bin/git --git-dir=/Users/TEvans/.cfg/ --work-tree=/Users/TEva
 alias tmux='TERM=screen-256color-bce tmux'
 alias mux="tmuxinator"
 
-alias ads="ev aad s"
-
 # Tmuxinator
 #source ~/.bin/tmuxinator.zsh
 
@@ -47,11 +45,10 @@ export FZF_DEFAULT_COMMAND='rg --files --no-ignore --hidden --follow --glob "!no
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=5'
 
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
-export PATH="$PATH:/opt/mssql-tools/bin"
 export PATH="$PATH:$HOME/go/bin"
 export PATH="$PATH:$HOME/.local/bin"
-export PATH="$PATH:$HOME/.dotnet/tools"
 export PATH="$PATH:$PATH:/usr/local/go/bin"
 
-export MSBuildSDKsPath="/usr/share/dotnet/sdk/3.1.401/Sdks"
-export ASPNETCORE_ENVIRONMENT=Development
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
