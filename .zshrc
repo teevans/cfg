@@ -1,4 +1,4 @@
-export ZSH="/home/tevans/.oh-my-zsh"
+export ZSH="/Users/tevans/.oh-my-zsh"
 
 ZSH_THEME="avit"
 
